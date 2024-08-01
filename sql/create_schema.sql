@@ -1,4 +1,4 @@
--- Crear tabla Category
+-- Create table Category
 CREATE TABLE category (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL
@@ -7,7 +7,7 @@ CREATE TABLE category (
 CREATE INDEX name_category
     on company("name");
 
--- Crear tabla Products
+-- Create table Products
 CREATE TABLE products (
     id SERIA5) NOL PRIMARY KEY,
     name VARCHAR(25T NULL,
