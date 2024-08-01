@@ -1,10 +1,13 @@
 package com.tutiendaonline.products.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Entity
 @Data
+@AllArgsConstructor
+@Table(name = "products")
 public class Products {
 
     @Id
