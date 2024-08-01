@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: tutiendaonline
+  datasource:
+    username: root
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 20000
+    url: jdbc:postgresql://localhost:5432/tutiendaonline
+    password: udemy
+server:
+  servlet:
+    context:
+      path: /tutiendaonline
+  port: 8081
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
