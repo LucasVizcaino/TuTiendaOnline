@@ -11,16 +11,21 @@ import java.net.URI;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping(path = "products")
+@RequestMapping(path = "tutiendaonline/api/products")
 @Slf4j
 public class ProductsController {
 
     private final ProductsService productsService;
 
     @GetMapping(path = "/{name}")
-    public ResponseEntity<Products> get(@PathVariable String name){
-        log.info("GET: product{}", name);
-        return ResponseEntity.ok(this.productsService.readByName(name));
+    public ResponseEntity<Products> get(@PathVariable String name) {
+        log.info("GET: product {}", name);
+        Products product = this.productsService.readByName(name);
+        if (product != null) {
+            return ResponseEntity.ok(product);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping

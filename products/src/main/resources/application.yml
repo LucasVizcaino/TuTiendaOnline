@@ -8,11 +8,13 @@ spring:
       connection-timeout: 20000
     url: jdbc:postgresql://localhost:5432/tutiendaonline
     password: udemy
+    driver-class-name: org.postgresql.Driver
 server:
   servlet:
     context:
       path: /tutiendaonline
   port: 8081
+
 logging:
   level:
     org:

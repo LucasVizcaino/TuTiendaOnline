@@ -23,8 +23,12 @@ public class ProductsServiceImp implements ProductsService {
 
     @Override
     public Products create(Products products){
-        Category category = categoryRepository.findById(products.getCategory().getId())
-                .orElseThrow(() -> new IllegalArgumentException("CategoryNotFound"));
+        Category category = categoryRepository.findByName(products.getCategory().getName())
+                .orElseGet(()-> {
+                    Category newCategory = new Category();
+                    newCategory.setName(products.getCategory().getName());
+                    return categoryRepository.save(newCategory);
+                });
         products.setCategory(category);
         return productsRepository.save(products);
     }
