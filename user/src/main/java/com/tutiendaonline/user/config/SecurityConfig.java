@@ -1,6 +1,6 @@
 package com.tutiendaonline.user.config;
 
-import com.tutiendaonline.user.service.UserServiceImp;
+
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -23,20 +23,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @AllArgsConstructor
 public class SecurityConfig {
 
-    private final UserServiceImp userService;
+
 
     private final AuthenticationProvider authenticationProvider;
 
     private final JwtAuthenticationFilter jwtAuthFilter;
 
-    private final AuthenticationManager authenticationManager;
 
-    @Bean
-    public AuthenticationProvider authenticationProvider(){
-        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-        provider.setUserDetailsService(userService);
-        return provider;
-    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
@@ -44,7 +37,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/public/**").permitAll()
+                                .requestMatchers("/api/v1/auth/**").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(sessionManagement ->
@@ -52,7 +45,6 @@ public class SecurityConfig {
                 )
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
-                .authenticationManager(authenticationManager)
         ;
 
 
