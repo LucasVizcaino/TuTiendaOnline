@@ -11,7 +11,7 @@ Features
 </ul>
 Technologies Used
 <ul>
-  <li><strong>Java 17</strong>: Modern, feature-rich version of the Java programming language.</li>
+  <li><strong>Java 21</strong>: Modern, feature-rich version of the Java programming language.</li>
   <li><strong>Spring Boot</strong>: Framework for simplifying the development of production-ready applications.</li>
   <li><strong>JPA (Java Persistence API)</strong>: For managing relational data in Java applications.</li>
   <li><strong>Spring Security</strong>: Provides authentication and authorization features to secure the application.</li>
