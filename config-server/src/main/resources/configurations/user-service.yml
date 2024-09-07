@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      username: tutiendaonline
+      password: udemy
+      host: localhost
+      port: 27017
+      database: coustumer
+      authentication-database: admin
+
+server:
+
+  port: 8090
+
