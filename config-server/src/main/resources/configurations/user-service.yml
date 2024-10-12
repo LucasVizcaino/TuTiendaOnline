@@ -1,14 +1,21 @@
 spring:
-  data:
-    mongodb:
-      username: tutiendaonline
-      password: udemy
-      host: localhost
-      port: 27017
-      database: coustumer
-      authentication-database: admin
+  datasource:
+    url: jdbc:postgresql://localhost:5432/userdb
+    username: roott
+    password: udemy
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 20000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
 
 server:
-
   port: 8090
-

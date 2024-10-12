@@ -1,17 +1,24 @@
 version: '3.8'
 
 services:
+  postgres:
+    image: postgres:16.1
+    container_name: userdb
+    restart: always
+    environment:
+      POSTGRES_USER: 'roott'
+      POSTGRES_PASSWORD: 'udemy'
+      POSTGRES_DB: 'userdb'
+    volumes:
+      - userdb_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432 # Usa un puerto diferente si el 5432 ya está ocupado en tu sistema
+    networks:
+      - ecommerce
 
-    db:
-      image: postgres:16.1
-      container_name: db-tutiendaonline
-      restart: always
-      volumes:
-        - ./sql/create_schema.sql:/docker-entrypoint-initdb.d/create_schema.sql
-        - ./sql/data.sql:/docker-entrypoint-initdb.d/data.sql
-      environment:
-        POSTGRES_DB: 'tutiendaonline'
-        POSTGRES_USER: 'root'
-        POSTGRES_PASSWORD: 'udemy'
-      ports:
-        - '5432:5432'
+networks:
+  ecommerce:
+    driver: bridge
+
+volumes:
+  userdb_data:

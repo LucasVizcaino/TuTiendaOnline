@@ -1,49 +1,45 @@
 package com.tutiendaonline.products.controllers;
 
-import com.tutiendaonline.products.entity.Products;
-import com.tutiendaonline.products.service.ProductsService;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import com.tutiendaonline.products.service.ProductService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
+import javax.validation.Valid;
+import java.util.List;
 
 @RestController
-@AllArgsConstructor
-@RequestMapping(path = "tutiendaonline/api/products")
-@Slf4j
+@RequiredArgsConstructor
+@RequestMapping(path = "/api/v1/products")
 public class ProductsController {
 
-    private final ProductsService productsService;
+    private final ProductService productsService;
 
-    @GetMapping(path = "/{name}")
-    public ResponseEntity<Products> get(@PathVariable String name) {
-        log.info("GET: product {}", name);
-        Products product = this.productsService.readByName(name);
-        if (product != null) {
-            return ResponseEntity.ok(product);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
+
 
     @PostMapping
-    public ResponseEntity<Products> post(@RequestBody Products products){
-        log.info("POST: product{}", products.getName());
-        return ResponseEntity.created(URI.create(this.productsService.create(products).getName())).build();
+    public ResponseEntity<Integer> create(@RequestBody @Valid ProductRequest request){
+        return ResponseEntity.ok(productsService.createProductWithCategory(request));
     }
 
-    @PutMapping(path = "{name}")
-    public ResponseEntity<Products> put(@RequestBody Products products, @PathVariable String name){
-        log.info("PUT: product{}", name);
-        return ResponseEntity.ok(this.productsService.update(products, name));
+
+
+    @PostMapping("/purchase")
+    public ResponseEntity<List<ProductPurchaseResponse>> productPurchase(
+            @RequestBody List<ProductPurchaseRequest> request
+    ){
+        return ResponseEntity.ok(productsService.purchaseProducts(request));
     }
 
-    @DeleteMapping(path = "{name}")
-    public ResponseEntity<?> delete(@PathVariable String name){
-        log.info("DELETE: product{}", name);
-        return ResponseEntity.noContent().build();
+    @GetMapping("/{product-id}")
+    public ResponseEntity<ProductResponse> findById(
+            @PathVariable("product-id") Integer productId
+    ){
+        return ResponseEntity.ok(productsService.findById(productId));
     }
 
+    @GetMapping
+    public ResponseEntity<List<ProductResponse>> findAll(){
+        return ResponseEntity.ok(productsService.findAll());
+    }
 }
