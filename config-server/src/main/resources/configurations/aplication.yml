@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: application
+message: "Config Server is working!"

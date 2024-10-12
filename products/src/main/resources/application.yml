@@ -1,26 +1,19 @@
 spring:
   application:
-    name: tutiendaonline
+    name: product-service
+  config:
+    import: optional:configserver:http://localhost:8888
   datasource:
-    username: root
-    hikari:
-      maximum-pool-size: 5
-      connection-timeout: 20000
-    url: jdbc:postgresql://localhost:5432/tutiendaonline
+    url: jdbc:postgresql://localhost:5433/costumers_db2
+    username: postgres
     password: udemy
     driver-class-name: org.postgresql.Driver
-server:
-  servlet:
-    context:
-      path: /tutiendaonline
-  port: 8081
-
-logging:
-  level:
-    org:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
       hibernate:
-        SQL: DEBUG
-        type:
-          descriptor:
-            sql:
-              BasicBinder: TRACE
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8891

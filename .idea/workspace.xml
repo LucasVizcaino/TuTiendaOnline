@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c04b6c3-0b25-4bd9-87f7-8cca56f5ac77" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/java/com/tutiendaonline/config_server/ConfigServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/java/com/tutiendaonline/config_server/ConfigServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/tutiendaonline/order/controller/OrderLineController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/tutiendaonline/order/controller/OrderLineResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/tutiendaonline/order/entity/OrderLineMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/tutiendaonline/order/repository/OrderLineRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/handler/GlobalHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/discovery-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/discovery-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/user-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/user-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/src/main/java/com/tutiendaonline/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/tutiendaonline/order/OrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/products/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/controllers/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/controllers/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/entity/Products.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/repositories/ProductsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/repositories/ProductsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/service/ProductsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/src/main/java/com/tutiendaonline/products/service/ProductsServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/products/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/entity/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/service/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/tutiendaonline/user/service/JwtService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application.yml" afterDir="false" />
@@ -21,6 +39,16 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Record" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,15 +70,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ConfigServerApplication.executor": "Run",
+    "Application.DiscoveryApplication.executor": "Run",
+    "Application.OrderApplication.executor": "Run",
+    "Application.ProductsApplication.executor": "Run",
+    "Application.UserApplication.executor": "Run",
     "Maven.config-server [org.springframework.boot:spring-boot-maven-plugin:3.3.2:run].executor": "Run",
     "Maven.discovery [org.springframework.boot:spring-boot-maven-plugin:3.3.2:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "config-server",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lucas/OneDrive/Desktop/Tu Tienda Online/TuTiendaOnline/TuTiendaOnline/user/pom.xml",
+    "last_opened_file_path": "C:/Users/lucas/OneDrive/Desktop/Tu Tienda Online/TuTiendaOnline/TuTiendaOnline",
     "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.tutiendaonline.order.controller" />
+      <recent name="com.tutiendaonline.order.entity" />
+      <recent name="com.tutiendaonline.order.service" />
+      <recent name="com.tutiendaonline.order.Costumer" />
+      <recent name="com.tutiendaonline.products.controllers" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -59,6 +101,82 @@
         <option value="MavenRunConfiguration" />
       </set>
     </option>
+  </component>
+  <component name="RunManager" selected="Application.OrderApplication">
+    <configuration name="ConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tutiendaonline.config_server.ConfigServerApplication" />
+      <module name="config-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutiendaonline.config_server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tutiendaonline.discovery.DiscoveryApplication" />
+      <module name="discovery" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutiendaonline.discovery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tutiendaonline.order.OrderApplication" />
+      <module name="order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutiendaonline.order.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tutiendaonline.products.ProductsApplication" />
+      <module name="products" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutiendaonline.products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tutiendaonline.user.UserApplication" />
+      <module name="user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutiendaonline.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProductsApplication" />
+        <item itemvalue="Application.OrderApplication" />
+        <item itemvalue="Application.DiscoveryApplication" />
+        <item itemvalue="Application.ConfigServerApplication" />
+        <item itemvalue="Application.UserApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
